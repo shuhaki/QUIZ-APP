@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shuhaki/QUIZ-APP/static/css/main.ba6410c0.css",
+    "main.js": "/shuhaki/QUIZ-APP/static/js/main.65c89738.js",
+    "static/js/453.ffc69977.chunk.js": "/shuhaki/QUIZ-APP/static/js/453.ffc69977.chunk.js",
+    "index.html": "/shuhaki/QUIZ-APP/index.html",
+    "main.ba6410c0.css.map": "/shuhaki/QUIZ-APP/static/css/main.ba6410c0.css.map",
+    "main.65c89738.js.map": "/shuhaki/QUIZ-APP/static/js/main.65c89738.js.map",
+    "453.ffc69977.chunk.js.map": "/shuhaki/QUIZ-APP/static/js/453.ffc69977.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba6410c0.css",
+    "static/js/main.65c89738.js"
+  ]
+}
