@@ -2,9 +2,9 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the capital of France?",
-      "options": ["London", "Berlin", "Paris", "Madrid"],
-      "correctAnswer": "Paris",
+      "question": "What is the capital of India?",
+      "options": ["London", "Berlin", "nwedelhi", "Madrid"],
+      "correctAnswer": "newdelhi",
       "difficulty": "easy"
     },
     {
