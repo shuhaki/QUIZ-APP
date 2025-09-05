@@ -2,6 +2,10 @@
 
 A responsive React-based quiz application with multiple difficulty levels, timer, scoring, and persistent high scores.
 
+## 🎥 Demo Video
+If you’d like to see the working demo without running locally:  
+👉 [Watch the video on Google Drive](https://drive.google.com/drive/folders/1GpXzDiCjwK8yXltbjv2YDBP4LURvyOsJ)
+
 ## Features
 
 - ✅ Multiple difficulty levels (Easy, Medium, Hard, All)
