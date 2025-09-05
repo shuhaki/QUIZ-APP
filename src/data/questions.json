@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "options": ["London", "Berlin", "Paris", "Madrid"],
+      "correctAnswer": "Paris",
+      "difficulty": "easy"
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "correctAnswer": "Mars",
+      "difficulty": "easy"
+    },
+    {
+      "id": 3,
+      "question": "What is the largest mammal in the world?",
+      "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      "correctAnswer": "Blue Whale",
+      "difficulty": "easy"
+    },
+    {
+      "id": 4,
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": ["Gold", "Oxygen", "Osmium", "Oganesson"],
+      "correctAnswer": "Oxygen",
+      "difficulty": "medium"
+    },
+    {
+      "id": 5,
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+      "correctAnswer": "William Shakespeare",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "correctAnswer": "Pacific Ocean",
+      "difficulty": "medium"
+    },
+    {
+      "id": 7,
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": ["China", "Thailand", "Japan", "South Korea"],
+      "correctAnswer": "Japan",
+      "difficulty": "medium"
+    },
+    {
+      "id": 8,
+      "question": "What is the hardest natural substance on Earth?",
+      "options": ["Gold", "Iron", "Diamond", "Platinum"],
+      "correctAnswer": "Diamond",
+      "difficulty": "hard"
+    },
+    {
+      "id": 9,
+      "question": "Which gas do plants absorb from the atmosphere?",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+      "correctAnswer": "Carbon Dioxide",
+      "difficulty": "hard"
+    },
+    {
+      "id": 10,
+      "question": "Who painted the Mona Lisa?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+      "correctAnswer": "Leonardo da Vinci",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-main {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Quiz Container */
+.quiz-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4a6fa5;
+  transition: width 0.3s ease;
+}
+
+/* Quiz Header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.question-count {
+  font-weight: bold;
+  color: #4a6fa5;
+}
+
+.timer {
+  background-color: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.timer.warning {
+  color: #e74c3c;
+}
+
+/* Question Component */
+.question-container {
+  margin-bottom: 2rem;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.options-list {
+  list-style: none;
+}
+
+.option-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.checkmark {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.option-text {
+  flex: 1;
+}
+
+.option-item:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.option-item.selected {
+  background-color: #4a6fa5;
+  color: white;
+  border-color: #3a5a80;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 111, 165, 0.3);
+
+}
+.option-item:active {
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.option-item.selected {
+  animation: pulse 0.3s ease;
+}
+@media (max-width: 768px) {
+  .option-item {
+    padding: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }}
+
+.option-item.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.option-item.incorrect {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  flex: 1;
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: #3a5a80;
+}
+
+.nav-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.nav-button.next {
+  background-color: #28a745;
+}
+
+.nav-button.next:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+/* Results Page */
+.results-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.score-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.score-section h3 {
+  font-size: 1.8rem;
+  color: #4a6fa5;
+  margin-bottom: 0.5rem;
+}
+
+.results-summary {
+  margin-bottom: 2rem;
+}
+
+.results-summary h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.result-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.result-item.correct {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+}
+
+.result-item.incorrect {
+  background-color: #f8d7da;
+  border-left-color: #dc3545;
+}
+
+.result-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.restart-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+.restart-button:hover {
+  background-color: #3a5a80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1rem;
+  }
+  
+  .quiz-container {
+    padding: 1.5rem;
+  }
+  
+  .quiz-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+  }
+
+ /* Add these styles to your App.css */
+
+.difficulty-selector {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+  appearance: none;
+  background-image: 
+    linear-gradient(45deg, #6a11cb 0%, #2575fc 100%),
+    linear-gradient(45deg, #ff6b6b 0%, #ff9a3d 100%),
+    linear-gradient(45deg, #00b09b 0%, #96c93d 100%),
+    linear-gradient(45deg, #4e54c8 0%, #8f94fb 100%);
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+
+.difficulty-selector:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 117, 252, 0.4);
+}
+
+.difficulty-selector:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.3);
+}
+
+/* Custom dropdown arrow */
+.difficulty-selector {
+  background-image: 
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e"),
+    linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  background-repeat: no-repeat;
+  background-position: right 1rem center, 0 0;
+  background-size: 1rem, 100%;
+  padding-right: 3rem;
+}
+
+/* Option colors */
+.difficulty-selector option {
+  background: white;
+  color: #333;
+  padding: 10px;
+}
+
+.difficulty-selector option[value="all"] {
+  background: linear-gradient(45deg, #4e54c8 0%, #8f94fb 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.difficulty-selector option[value="easy"] {
+  background: linear-gradient(45deg, #00b09b 0%, #96c93d 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.difficulty-selector option[value="medium"] {
+  background: linear-gradient(45deg, #ff6b6b 0%, #ff9a3d 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.difficulty-selector option[value="hard"] {
+  background: linear-gradient(45deg, #8E2DE2 0%, #4A00E0 100%);
+  color: white;
+  font-weight: bold;
+}
+
+/* Difficulty badges in quiz */
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+.difficulty-easy {
+  background: linear-gradient(45deg, #00b09b 0%, #96c93d 100%);
+  color: white;
+}
+
+.difficulty-medium {
+  background: linear-gradient(45deg, #ff6b6b 0%, #ff9a3d 100%);
+  color: white;
+}
+
+.difficulty-hard {
+  background: linear-gradient(45deg, #8E2DE2 0%, #4A00E0 100%);
+  color: white;
+}
+  
+  .app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive design for header */
+  @media (max-width: 768px) {
+    .app-header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .difficulty-selector {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+  .high-scores {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a6fa5;
+  }
+  
+  .high-scores h3 {
+    margin-bottom: 1rem;
+    color: #4a6fa5;
+  }
+  
+  .high-scores ul {
+    list-style: none;
+  }
+  
+  .high-scores li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .high-scores li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Responsive design for high scores */
+  @media (max-width: 768px) {
+    .high-scores li {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+}
